@@ -13,3 +13,9 @@ for i in score:
   if int(i) < 60:
     count += 1
 print("不及格人数:",count)
+
+total = 0
+for i in score:
+  total += int(i)
+avg = total / len(score)
+print(f"平均為:{avg}")
