@@ -8,15 +8,27 @@ Original file is located at
 """
 
 score = input().split()
+
 count = 0
+total = 0
 min,max = int(score[0]),int(score[0])
+
 for i in score:
   if int(i) < 60:
     count += 1
+    
+  if 0<= int(i) <=100:
+    total += int(i)
+    avg = total / len(score)  
+    
   if int(i) <min:
     min = int(i)
+    
   if int(i) >max:
     max = int(i)
-  print("不及格人数:",count)
-  print("min:",min)
-  print("max:",max)
+    
+print("不及格人数:",count)
+print("min:",min)
+print("max:",max)
+print(f"平均為:{avg}")
+
